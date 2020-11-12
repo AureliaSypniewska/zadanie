@@ -1,0 +1,124 @@
+
+$ornge: #ee6443;
+$popgreen: #00a69d;
+$blue: #1c75bb;
+$darkblue: #1a4562;
+$white: #ffffff;
+$black: #000000;
+$lightgrey: #f5f4f4;
+$darkgrey: #333;
+$darkerblue: #000333;
+$grey: #cccccc;
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "difrent":      991px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px,
+    "desktop-huge": 1640px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+
+
+
+header{
+    &.top{
+        margin-bottom:30px;
+        background-image: url(../images/laptop-2557574_1920.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    #site-title{
+        a{
+            font-size: 2.5em;
+            color: $darkgrey;
+            text-shadow: 1px 1px 1px $grey;
+        }
+    }    
+}
+
+
+.navbar-list{
+    width:100%;
+    li{
+        display: inline-block;
+        position:relative;
+        a{
+            display: block;
+            padding: 21px 10px;
+            margin: 0;
+        }
+        ul{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            li{
+                display: none;
+                padding: 10px;
+                position: absolute;
+                top: 40px;
+                background: $white;
+                z-index: 100;
+                margin: 0;
+                border-bottom: 1px dashed $black;
+            }
+            @include mq('tablet', "max"){
+                z-index:1;
+            }
+        }
+        &:hover{
+            ul{
+                li{
+                    display: inline-block;
+                    a{
+                        padding:15px;
+                    }
+                }
+            }
+        }
+    }
+}
+.nav-toggle {
+    
+    @include mq('tablet', "max"){
+        display:none;
+    }
+}
+
+aside{
+    section{
+        &.widget{
+            margin: 20px 0;
+
+        }
+    }
+    .searchform{
+        .s{
+            &input{
+                width: 50%;
+            }
+        }
+    }
+    .widget-title{
+        border-bottom: 1px solid;
+    }
+
+}
+
+

@@ -1,0 +1,76 @@
+header.top {
+  margin-bottom: 30px;
+  background-image: url(../images/laptop-2557574_1920.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+header #site-title a {
+  font-size: 2.5em;
+  color: #333;
+  text-shadow: 1px 1px 1px #cccccc;
+}
+
+.navbar-list {
+  width: 100%;
+}
+
+.navbar-list li {
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-list li a {
+  display: block;
+  padding: 21px 10px;
+  margin: 0;
+}
+
+.navbar-list li ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-list li ul li {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  background: #ffffff;
+  z-index: 100;
+  margin: 0;
+  border-bottom: 1px dashed #000000;
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-list li ul {
+    z-index: 1;
+  }
+}
+
+.navbar-list li:hover ul li {
+  display: inline-block;
+}
+
+.navbar-list li:hover ul li a {
+  padding: 15px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-toggle {
+    display: none;
+  }
+}
+
+aside section.widget {
+  margin: 20px 0;
+}
+
+aside .searchform .sinput {
+  width: 50%;
+}
+
+aside .widget-title {
+  border-bottom: 1px solid;
+}

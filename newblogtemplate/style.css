@@ -1,0 +1,113 @@
+/*
+Theme Name: New blog template
+Theme URI: http://www.aurainweb.pl
+Description: Przykładowy szablon.
+Author: Aura
+Author URI: http://www.aurainweb.pl
+Version: 1.0
+Tags: responsive, white, scelton
+ 
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+ 
+This simple theme was built using the example Sceleton theme "Basic marketing site" found on the Bootstrap
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+ 
+@import url('css/normalize.css');
+@import url('css/bootstrap.min.css');
+@import url('css/custom.css');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+ text-decoration: none;
+}
+
+img{
+	max-width: 100%;
+	height:auto;
+} 
+#primary-menu{
+ list-style: none;
+}
+
+@media screen and (min-width: 750px) {
+
+#flip{
+	display:none;
+	}
+#panel{ 
+	display: block !important;
+}
+
+.home .oferty .column, .home .oferty .columns, .category .oferty .columns{
+	margin-left: 2%;
+	}
+.home .column:first-child, .home .columns:first-child{
+	margin-left: 0%;
+	}
+.navbar-list li:last-child a{
+	border-right:none;
+	}
+.wpcf7-form input[type="email"], .wpcf7-form input[type="number"], .wpcf7-form input[type="search"], .wpcf7-form input[type="text"], .wpcf7-form input[type="tel"], .wpcf7-form input[type="url"], .wpcf7-form input[type="password"], .wpcf7-form textarea{ 
+width: 95%;
+}
+}
+@media screen and (max-width: 750px) {
+#panel {
+padding: 5px;
+text-align: center;
+background:#0a0a0a;
+}
+#flip {
+padding: 5px;
+text-align: center; width:30px;
+float:right;
+}
+ 
+#panel {
+padding: 0px;
+display: none;
+position: relative;
+width:100%; z-index: 1;
+}
+#panel .navbar-list{width:100%; display:block; background:#0a0a0a;}
+#panel .navbar-list li {border-bottom:1px solid #fff;}
+#panel .navbar-list li a{color:#fff;}
+ 
+.navbar-toggle {
+ position: relative;
+ float: right;
+ padding: 9px 10px;
+ margin-top: 8px;
+ margin-right: 15px;
+ margin-bottom: 8px;
+ background-color: transparent;
+ background-image: none;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ width: 45px;
+}
+.sr-only {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0,0,0,0);
+ border: 0;
+}
+.navbar-toggle .icon-bar {
+ background-color: #ddd;
+ display: block;
+ width: 22px;
+ height: 3px;
+ border-radius: 1px;
+ margin-bottom:3px;
+}
+}
